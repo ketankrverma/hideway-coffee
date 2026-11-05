@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-espresso-950: #120d0b;
+  --color-espresso-900: #1a1310;
+  --color-espresso-850: #221a16;
+  --color-espresso-800: #2c211b;
+  --color-espresso-700: #42322a;
+  --color-espresso-600: #5c473c;
+
+  --color-caramel-700: #8c4e22;
+  --color-caramel-600: #a75d29;
+  --color-caramel-500: #c27d49;
+  --color-caramel-400: #d6986a;
+  --color-caramel-300: #e8b992;
+  --color-caramel-200: #f4d9c0;
+  --color-caramel-100: #fbf0e4;
+
+  --color-brass-500: #b89158;
+  --color-brass-400: #cca56c;
+  --color-brass-300: #dfbe87;
+
+  --color-cream-50: #fdfbf7;
+  --color-cream-100: #f8f4eb;
+  --color-cream-200: #f1e9d8;
+  --color-cream-300: #e5dac1;
+  --color-cream-400: #d1c19d;
+
+  --color-charcoal-900: #141211;
+  --color-charcoal-800: #221f1d;
+  --color-charcoal-700: #36322f;
+  --color-charcoal-600: #4f4945;
+  --color-charcoal-500: #6e6761;
+  --color-charcoal-400: #948c84;
+  --color-charcoal-300: #bdb5ad;
+  --color-charcoal-200: #ded8d2;
+  --color-charcoal-100: #f0ece8;
+}
+
+:root {
+  --background: #fdfbf7;
+  --foreground: #1a1310;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle Film Grain Texture Overlay */
+.london-grain {
+  background-image: radial-gradient(rgba(28, 21, 18, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* London West End Stamp Border */
+.postage-border {
+  border: 1px dashed rgba(194, 125, 73, 0.4);
+}
+
+/* Luxury Editorial Underline */
+.editorial-link {
+  position: relative;
+  display: inline-block;
+}
+.editorial-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.editorial-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1e9d8;
+}
+::-webkit-scrollbar-thumb {
+  background: #a75d29;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8c4e22;
+}
+
+::selection {
+  background-color: #2c211b;
+  color: #fdfbf7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
