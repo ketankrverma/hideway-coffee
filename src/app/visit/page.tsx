@@ -231,7 +231,7 @@ export default function VisitPage() {
                   className="text-caramel-700 hover:text-caramel-800 underline font-medium flex items-center gap-1"
                 >
                   <InstagramIcon className="w-3.5 h-3.5" />
-                  <span>Instagram @hideawaycoffeehouse</span>
+                  <span>Instagram {LOCATION_INFO.instagramHandle}</span>
                 </a>
               </div>
             </div>

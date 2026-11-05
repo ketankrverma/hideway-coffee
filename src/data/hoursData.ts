@@ -29,8 +29,8 @@ export const LOCATION_INFO = {
   googleMapsDirectionsUrl: "https://www.google.com/maps/dir/?api=1&destination=7+Farriers+Passage+London+W1D+7DP",
   phone: "Editable placeholder: +44 20 7946 0192",
   email: "hello@hideawaycoffeehouse.co.uk",
-  instagram: "https://instagram.com/hideawaycoffeehouse",
-  instagramHandle: "@hideawaycoffeehouse",
+  instagram: "https://instagram.com/hideawaycoffee",
+  instagramHandle: "@hideawaycoffee",
   transit: [
     {
       station: "Tottenham Court Road",
